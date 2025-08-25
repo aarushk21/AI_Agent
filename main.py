@@ -32,7 +32,7 @@ load_dotenv()
 # Create an instance of the OpenAI class (will be initialized when needed)
 openai_client = None
 
-def generate_text_with_conversation(messages, model="gpt-4"):
+def generate_text_with_conversation(messages, model="gpt-3.5-turbo"):
     """
     Generate text using OpenAI API with conversation context.
     """
@@ -116,7 +116,7 @@ def execute_function(function_name, function_params):
     else:
         return f"Function {function_name} not found"
 
-def run_ai_agent(user_question, system_prompt=basic_system_prompt, model="gpt-4"):
+def run_ai_agent(user_question, system_prompt=basic_system_prompt, model="gpt-3.5-turbo"):
     """
     Run the AI agent with the ReAct loop.
     """
